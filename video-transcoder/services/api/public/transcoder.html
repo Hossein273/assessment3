@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Transcoder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Video Transcoder</h1>
+
+      <label for="videoInput">Choose a video:</label>
+      <input type="file" id="videoInput" accept="video/*" />
+
+      <div style="margin-top: 10px">
+        <button id="uploadBtn">Upload</button>
+        <button id="signOutBtn">Sign Out</button>
+      </div>
+
+      <div id="status" style="margin-top: 15px"></div>
+
+      <hr />
+      <h2>My Videos</h2>
+      <button id="refreshBtn">Refresh List</button>
+      <ul id="videoList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
