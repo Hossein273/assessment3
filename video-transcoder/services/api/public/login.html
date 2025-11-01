@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+
+      <!-- Step 1: Username + Password -->
+      <form id="loginForm">
+        <label>
+          Username
+          <input type="text" name="username" placeholder="Username" required />
+        </label>
+        <label>
+          Password
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Step 2: MFA code (hidden until challenge required) -->
+      <div id="mfaStep" style="display: none; margin-top: 20px">
+        <label>
+          SMS Code
+          <input type="text" id="mfaCode" placeholder="Enter 6-digit code" />
+        </label>
+        <button id="mfaBtn">Verify Code</button>
+      </div>
+
+      <div id="loginStatus" style="margin-top: 15px"></div>
+      <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
